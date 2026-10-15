@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KD Bakers · Cakes & Bakes, Ahmedabad</title>
+<meta name="description" content="KD Bakers, Ahmedabad: freshly baked custom cakes, pastries and bakes. Order your cake on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf6ee;--ink:#2b1a12;--choc:#4a2c1d;--rose:#e8b4a8;--gold:#b8873b;--muted:#7a6558}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:300;line-height:1.05}
+a{color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:9;background:rgba(251,246,238,.85);backdrop-filter:blur(12px);border-bottom:1px solid #ecdfcf}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:500 22px Fraunces,serif;letter-spacing:.02em}.logo i{color:var(--gold);font-style:italic;font-weight:300}
+nav ul{display:flex;gap:32px;list-style:none;font-size:14px}nav ul a{text-decoration:none;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--choc);color:var(--cream);padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--ink)}
+.btn.ghost{background:none;color:var(--choc);border:1px solid var(--choc)}
+.hero{padding:90px 0 110px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.hero h1{font-size:clamp(48px,7.5vw,96px)}.hero h1 em{color:var(--gold)}
+.hero p{max-width:440px;color:var(--muted);font-size:18px;margin:28px 0 38px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.rating{margin-top:38px;font-size:14px;color:var(--muted)}.rating b{color:var(--gold)}
+/* CSS cake */
+.stage{position:relative;aspect-ratio:1;display:grid;place-items:center}
+.stage:before{content:"";position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,#f3dccb,transparent 70%)}
+.cake{position:relative;width:62%;animation:float 6s ease-in-out infinite}
+.tier{margin:auto;border-radius:14px 14px 8px 8px;position:relative;box-shadow:inset 0 -14px 0 rgba(0,0,0,.08)}
+.t1{width:56%;height:70px;background:var(--rose)}.t2{width:78%;height:90px;background:#f4e4d4}.t3{width:100%;height:110px;background:var(--choc)}
+.tier:before{content:"";position:absolute;left:0;right:0;top:0;height:22px;border-radius:14px 14px 50% 50%/14px 14px 22px 22px;background:inherit;filter:brightness(1.12)}
+.t3:after{content:"";position:absolute;left:0;right:0;top:0;height:28px;background:radial-gradient(circle at 10px 0,#f4e4d4 12px,transparent 13px) 0 0/24px 28px}
+.plate{height:14px;width:118%;margin-left:-9%;background:#d9c6b3;border-radius:50%}
+.berry{position:absolute;top:-16px;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:#b8323a;box-shadow:inset -4px -4px 0 rgba(0,0,0,.18)}
+@keyframes float{50%{transform:translateY(-14px)}}
+section{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.head h2{font-size:clamp(38px,5vw,64px)}.head p{max-width:380px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:24px;padding:34px;border:1px solid #efe3d4;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -24px rgba(74,44,29,.35)}
+.sw{height:180px;border-radius:16px;margin-bottom:26px}
+.card h3{font-size:28px;margin-bottom:8px}.card p{color:var(--muted);font-size:15px}
+.dark{background:var(--choc);color:var(--cream)}.dark .head p,.dark .step p{color:#d8c4b4}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:s}
+.step{border-top:1px solid #7a5643;padding-top:26px}
+.step:before{counter-increment:s;content:"0" counter(s);font:300 46px Fraunces,serif;color:var(--rose);display:block;margin-bottom:14px}
+.step h3{font-size:24px;margin-bottom:8px}
+.order{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+form{background:#fff;border:1px solid #efe3d4;border-radius:24px;padding:36px;display:grid;gap:16px}
+label{font-size:13px;color:var(--muted);display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 16px;border:1px solid #e3d4c3;border-radius:12px;background:var(--cream);color:var(--ink)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+footer{padding:60px 0;border-top:1px solid #ecdfcf;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fab{position:fixed;right:20px;bottom:20px;z-index:9;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.reveal{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){nav ul{display:none}.hero,.order{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}section{padding:80px 0}.hero{padding:50px 0 70px}}
+@media(max-width:480px){.wrap{padding:0 16px}.steps,.row{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.cake{animation:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><div class="logo">KD <i>Bakers</i></div>
+<ul><li><a href="#menu">Cakes</a></li><li><a href="#how">How to order</a></li><li><a href="#order">Order</a></li></ul>
+<a class="btn" href="tel:+919033240331">Call us</a></div></nav>
+
+<header class="wrap hero">
+<div>
+<div class="eyebrow">Bakery & Cake Shop · Ahmedabad</div>
+<h1>Cakes made for <em>your</em> moments.</h1>
+<p>Fresh custom cakes, pastries and bakes from our Ahmedabad kitchen. Tell us the occasion, flavour and size and we'll take it from there.</p>
+<div class="cta"><a class="btn" href="#order">Order a cake →</a><a class="btn ghost" href="#menu">See our cakes</a></div>
+<div class="rating"><b>★ 4.5</b> on Google</div>
+</div>
+<div class="stage" aria-hidden="true"><div class="cake"><div class="tier t1"><span class="berry"></span></div><div class="tier t2"></div><div class="tier t3"></div><div class="plate"></div></div></div>
+</header>
+
+<section id="menu"><div class="wrap">
+<div class="head reveal"><h2>Something for<br>every celebration</h2><p>Every cake is baked to order. Choose a style below, or send us a photo of what you have in mind.</p></div>
+<div class="grid">
+<div class="card reveal"><div class="sw" style="background:linear-gradient(135deg,#4a2c1d,#7b4a30)"></div><h3>Birthday cakes</h3><p>Chocolate truffle, black forest, butterscotch, pineapple and more, with your name piped on.</p></div>
+<div class="card reveal"><div class="sw" style="background:linear-gradient(135deg,#e8b4a8,#f6dcd2)"></div><h3>Custom & theme</h3><p>Photo cakes, kids' themes, anniversaries. Share a reference picture and we'll match it.</p></div>
+<div class="card reveal"><div class="sw" style="background:linear-gradient(135deg,#d9b778,#f2e2bd)"></div><h3>Pastries & bakes</h3><p>Pastries, cupcakes, cookies and fresh bakes for everyday treats and office orders.</p></div>
+</div></div></section>
+
+<section id="how" class="dark"><div class="wrap">
+<div class="head reveal"><h2>Ordering takes<br>two minutes</h2><p>No apps, no sign-ups. Just a WhatsApp message.</p></div>
+<div class="steps">
+<div class="step reveal"><h3>Pick a cake</h3><p>Choose flavour, size and design.</p></div>
+<div class="step reveal"><h3>Send the details</h3><p>Fill the form below; it opens WhatsApp for you.</p></div>
+<div class="step reveal"><h3>We confirm</h3><p>We reply with the price and pickup time.</p></div>
+<div class="step reveal"><h3>Celebrate</h3><p>Collect it fresh, on the day you need it.</p></div>
+</div></div></section>
+
+<section id="order"><div class="wrap order">
+<div class="reveal"><div class="eyebrow">Order your cake</div><h2 style="font-size:clamp(38px,5vw,64px)">Tell us what<br>you're celebrating.</h2>
+<p style="color:var(--muted);margin-top:22px;max-width:400px">Your order goes straight to us on WhatsApp. Prefer to talk? Call <a href="tel:+919033240331">+91 90332 40331</a>.</p></div>
+<form class="reveal" id="f">
+<div class="row"><label>Your name<input name="n" required></label><label>Date needed<input name="d" type="date" required></label></div>
+<div class="row"><label>Occasion<select name="o"><option>Birthday</option><option>Anniversary</option><option>Kids' party</option><option>Office / other</option></select></label>
+<label>Size<select name="s"><option>0.5 kg</option><option>1 kg</option><option>2 kg</option><option>3 kg+</option></select></label></div>
+<label>Flavour<select name="fl"><option>Chocolate truffle</option><option>Black forest</option><option>Butterscotch</option><option>Pineapple</option><option>Red velvet</option><option>Not sure, suggest one</option></select></label>
+<label>Message on cake / notes<textarea name="m" rows="3"></textarea></label>
+<button class="btn" style="border:0;cursor:pointer;justify-content:center">Send order on WhatsApp →</button>
+</form></div></section>
+
+<footer><div class="wrap"><div><div class="logo" style="color:var(--ink)">KD <i>Bakers</i></div>Bakery & Cake Shop, Ahmedabad</div>
+<div><a href="tel:+919033240331">+91 90332 40331</a></div><div>© 2026 KD Bakers</div></div></footer>
+
+<a class="fab" href="https://wa.me/919033240331" aria-label="WhatsApp us"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const v=Object.fromEntries(new FormData(e.target));
+const t=`Hi KD Bakers! Cake order:\nName: ${v.n}\nDate: ${v.d}\nOccasion: ${v.o}\nSize: ${v.s}\nFlavour: ${v.fl}\nNotes: ${v.m||'-'}`;
+location.href='https://wa.me/919033240331?text='+encodeURIComponent(t)};
+const io=new IntersectionObserver(es=>es.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')),2500);
+</script>
+</body>
+</html>
